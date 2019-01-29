@@ -1,0 +1,30 @@
+
+.btn {
+  border: none; /* Remove borders */
+  color: white; /* Add a text color */
+  padding: 14px 28px; /* Add some padding */
+  cursor: pointer; /* Add a pointer cursor on mouse-over */
+	position: absolute;
+	text-align:center;
+	margin:auto;
+  display:block;
+}
+
+.success {background-color: #4CAF50;} /* Green */
+.success:hover {background-color: #46a049;}
+
+
+.center{
+	text-align:center;
+	padding: 20px 28px; /* Add some padding */
+	margin:auto;
+}
+.cbtn{
+	
+	
+}
+
+p {
+  color: red;
+  text-align: center;
+}

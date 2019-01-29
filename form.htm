@@ -1,0 +1,82 @@
+<doctype! html>
+<head>
+	<title>Form --Mrinal--actual</title>
+	<link rel="stylesheet" type="text/css" href="m2.css"> 
+	
+</head>
+	<body bgcolor="skyblue">
+	<h3><p>FILL UP YOUR DETAILS</p></h3>
+		<form>
+<div class="center">
+			FIRST NAME <input id="fname" type="text"><br>
+			LAST NAME <input id="lname" type="text"><br>
+			MIDDLE NAME <input id="mname" type="text"><br>
+			<input type="radio" value="female" name="gender">FEMALE<br>
+			<input type="radio" value="male" name="gender" >MALE<br>
+			PHONE NO.<input id="phn" type="text"><br>
+			DOB.<input type="date"><br>
+			E-MAIL ID<input id="em" type="text"><br>
+			LINKS<br>
+					<input type="text" placeholder="github"><br>
+					<input type="text" placeholder="resume"><br>	
+			
+			Why do you wan't to work with us?<textarea></textarea><br><br>
+			PASSWORD<input id="pass" type="password"><br>	
+
+</div>
+		</form>
+	
+	<button type="button" class="btn success" onclick="f1()">Register for drive</button>
+
+
+<script>
+
+function f1(){
+
+var flag=0;
+
+var x;
+  x = document.getElementById("phn").value;
+		if (isNaN(x) || x.length<10) {
+		alert("Pls enter valid number!!");
+
+		flag=1;
+		}
+
+		if (document.getElementById("fname").value == "" ||document.getElementById("lname").value == "" 
+				||document.getElementById("mname").value == "") 
+					{
+		          alert("Name should not be blank");
+								flag=1;
+		      }
+
+			var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+       if (reg.test(document.getElementById("em").value) == false) 
+        {
+            alert('Invalid Email Address');
+          	flag=1;
+        }
+
+
+		 var genders = document.getElementsByName("gender");
+                if(!(genders[0].checked == true )||(genders[1].checked == true)) {
+                alert("Must check some option for gender!");flag=1;}
+
+
+		var passs = document.getElementById("pass");
+			if (passs.value==""){alert("Must add pass!");flag=1;}
+
+if(flag==0)
+alert("You have now registered!!");
+};
+
+    
+
+
+</script>
+
+
+
+
+	</body>
+</html>
